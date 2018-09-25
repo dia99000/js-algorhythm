@@ -1,0 +1,35 @@
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>Sort Algorhythm</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="app">
+			<div class="header">
+				<h1>Vue.jsで作るソートアルゴリズム</h1>
+			</div>
+			<div class="container">
+				<form v-on:submit.prevent>
+					<span>文字を追加：</span><input type="text" v-model="number">
+					<button v-on:click="addNumber">Add</button>
+				</form>
+				<hr>
+				<section v-if="isAdded"><span>配列：</span>{{arr}}</section>
+				<section v-else>数値を入力して配列を生成</section>
+			</div>
+		</div>
+	  <h3>データの挙動</h3>
+  	<pre>{{ $data }}</pre>
+	</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/sortAlgorhythm.js"></script>
+<!--
+１．文字を入力、配列に追加
+２．配列を表示させる
+３．ソートの種類を選ぶ(checkbox)
+４．ソート結果を表示
+   ＊計算量を追加
+ -->
