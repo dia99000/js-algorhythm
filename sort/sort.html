@@ -15,14 +15,31 @@
 					<button v-on:click="addNumber">Add</button>
 				</form>
 				<hr>
-				<section v-if="isAdded"><span>配列：</span>{{arr}}</section>
+				<section v-if="isAdded"><span>入力された配列：</span>{{arr}}</section>
 				<section v-else>数値を入力して配列を生成</section>
+			</div>
+			<hr>
+			<div class="container">
+				<section v-if="isSorted"><span>ソートされた配列：</span>{{sortedArr}}</section>
+				<section v-else>ボタンを押してソートしよう</section>
+				<form v-on:submit.prevent>
+					<p>
+						<button v-on:click="bubbleSort">バブルソート</button>
+					</p>
+					<p>
+						<button v-on:click="selectionSort">選択ソート</button>
+					</p>
+					<p>
+						<button v-on:click="insertionSort">挿入ソート</button>
+					</p>
+				</form>
 			</div>
 		</div>
 	  <h3>データの挙動</h3>
   	<pre>{{ $data }}</pre>
 	</body>
 </html>
+
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 <script src="js/sortAlgorhythm.js"></script>
